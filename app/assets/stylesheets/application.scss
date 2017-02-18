@@ -1,0 +1,95 @@
+@import 'bourbon';
+@import 'normalize';
+@import 'variables';
+@import 'typography';
+
+body#application.index {
+
+  a#brand {
+    @include position(absolute, 0px null null 0px);
+    padding: 16px;
+    color: $white;
+    text-decoration: none;
+    z-index: $z-index-jumbotron;
+    opacity: 0.75;
+    @include transition(opacity 0.2s ease-in-out);
+    &:hover { opacity: 1; }
+  }
+
+  /*********************************************/
+  /* Mobile                                    */
+  /*********************************************/
+
+  section#jumbotron {
+    position: relative;
+    padding: 16px;
+    min-height: 100vh;
+    background-image: image-url('675073365.jpg');
+    background-size: cover;
+    background-position: 45% center;
+    &:before {
+      content: '';
+      @include position(absolute, 0px);
+      background-color: rgba(57, 40, 23, 0.64);
+    }
+    #jumbotron-content-wrapper {
+      position: relative;
+      padding: 3em 16px;
+      margin: auto;
+      max-width: 700px;
+      text-align: center;
+      z-index: $z-index-jumbotron;
+      h1 {
+        font-size: 14vw;
+        line-height: 14vw;
+        color: $white;
+        text-shadow: 0px 1px 1px #000;
+      }
+      p {
+        margin-top: 3rem;
+        font-size: 1.25rem;
+        line-height: 2rem;
+        color: #d4d1cc;
+        text-shadow: 0px 2px 1px #0C0707, 0px 2px 15px #0C0707, 0px 12px 25px #0C0707;
+      }
+    }
+    video {
+      display: none;
+    }
+
+    /*********************************************/
+    /* Desktop                                   */
+    /*********************************************/
+
+    @media(min-width: 560px) {
+      background: $dark-brown;
+      &:before {
+        background-color: rgba(96, 72, 47, 0.44);
+      }
+      #jumbotron-content-wrapper {
+        @include position(absolute, 0px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+          font-size: 3.5rem;
+          line-height: 3.5rem;
+        }
+        p {
+          margin-top: 3rem;
+          font-size: 1.25rem;
+          line-height: 2rem;
+        }
+      }
+      video {
+        display: block;
+        @include position(absolute, 0px null null null);
+        margin: 0px -16px;
+        @include size(100%);
+        object-fit: cover;
+        opacity: 0.5;
+      }
+    }
+  }
+}

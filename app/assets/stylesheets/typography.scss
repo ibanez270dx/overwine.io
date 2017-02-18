@@ -1,0 +1,130 @@
+/*
+  Based on Typebase v0.1.0 (MIT License)
+  https://github.com/devinhunt/typebase.css
+*/
+
+@include font-face("Bitter", "bitter/Bitter-Regular", $style: normal, $asset-pipeline: true, $file-formats: ttf);
+@include font-face("Bitter", "bitter/Bitter-Italic",  $style: italic, $asset-pipeline: true, $file-formats: ttf);
+@include font-face("Bitter", "bitter/Bitter-Bold",    $style: bold,   $asset-pipeline: true, $file-formats: ttf);
+
+@include font-face("Raleway", "raleway/Raleway-Thin",       $weight: 100, $style: normal, $asset-pipeline: true, $file-formats: ttf);
+@include font-face("Raleway", "raleway/Raleway-ExtraLight", $weight: 200, $style: normal, $asset-pipeline: true, $file-formats: ttf);
+@include font-face("Raleway", "raleway/Raleway-Light",      $weight: 300, $style: normal, $asset-pipeline: true, $file-formats: ttf);
+@include font-face("Raleway", "raleway/Raleway-Regular",    $weight: 400, $style: normal, $asset-pipeline: true, $file-formats: ttf);
+@include font-face("Raleway", "raleway/Raleway-Medium",     $weight: 500, $style: normal, $asset-pipeline: true, $file-formats: ttf);
+@include font-face("Raleway", "raleway/Raleway-SemiBold",   $weight: 600, $style: bold,   $asset-pipeline: true, $file-formats: ttf);
+@include font-face("Raleway", "raleway/Raleway-Bold",       $weight: 700, $style: bold,   $asset-pipeline: true, $file-formats: ttf);
+@include font-face("Raleway", "raleway/Raleway-ExtraBold",  $weight: 800, $style: bold,   $asset-pipeline: true, $file-formats: ttf);
+@include font-face("Raleway", "raleway/Raleway-Black",      $weight: 900, $style: bold,   $asset-pipeline: true, $file-formats: ttf);
+
+@include font-face("Raleway", "raleway/Raleway-ThinItalic",       $weight: 100, $style: italic,  $asset-pipeline: true, $file-formats: ttf);
+@include font-face("Raleway", "raleway/Raleway-ExtraLightItalic", $weight: 200, $style: italic,  $asset-pipeline: true, $file-formats: ttf);
+@include font-face("Raleway", "raleway/Raleway-LightItalic",      $weight: 300, $style: italic,  $asset-pipeline: true, $file-formats: ttf);
+@include font-face("Raleway", "raleway/Raleway-Italic",           $weight: 400, $style: italic,  $asset-pipeline: true, $file-formats: ttf);
+@include font-face("Raleway", "raleway/Raleway-MediumItalic",     $weight: 500, $style: italic,  $asset-pipeline: true, $file-formats: ttf);
+@include font-face("Raleway", "raleway/Raleway-SemiBoldItalic",   $weight: 600, $style: oblique, $asset-pipeline: true, $file-formats: ttf);
+@include font-face("Raleway", "raleway/Raleway-BoldItalic",       $weight: 700, $style: oblique, $asset-pipeline: true, $file-formats: ttf);
+@include font-face("Raleway", "raleway/Raleway-ExtraBoldItalic",  $weight: 800, $style: oblique, $asset-pipeline: true, $file-formats: ttf);
+@include font-face("Raleway", "raleway/Raleway-BlackItalic",      $weight: 900, $style: oblique, $asset-pipeline: true, $file-formats: ttf);
+
+html {
+  font-family: "Raleway";
+  font-size: 137.5%;
+  -webkit-font-smoothing: antialiased;
+
+  // Make fonts render decently
+  @include font-feature-settings("liga");
+  @include font-feature-settings("pnum", "kern" false);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-font-smoothing: antialiased !important;
+  text-rendering: optimizelegibility !important;
+}
+
+/***********************************************/
+/* Copy & Lists                                */
+/***********************************************/
+
+p {
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+ul, ol {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+ul li, ol li {
+  line-height: 1.5rem;
+}
+
+ul ul, ol ul, ul ol, ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+blockquote {
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/***********************************************/
+/* Headings                                    */
+/***********************************************/
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Bitter";
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  line-height: 1.5rem;
+  &h1 {
+    font-size: 4.242rem;
+    line-height: 4.5rem;
+    margin-top: 3rem;
+  }
+  &h2 {
+    font-size: 2.828rem;
+    line-height: 3rem;
+    margin-top: 3rem;
+  }
+  &h3 { font-size: 1.414rem; }
+  &h4 { font-size: 0.707rem; }
+  &h5 { font-size: 0.4713333333333333rem; }
+  &h6 { font-size: 0.3535rem; }
+}
+
+/***********************************************/
+/* Tables                                      */
+/***********************************************/
+
+table {
+  margin-top: 1.5rem;
+  border-spacing: 0px;
+  border-collapse: collapse;
+
+  td, th {
+    padding: 0;
+    line-height: 33px;
+  }
+}
+
+/***********************************************/
+/* Code blocks                                 */
+/***********************************************/
+
+code {
+  vertical-align: bottom;
+}
+
+/***********************************************/
+/* Helpers                                     */
+/***********************************************/
+
+/* Leading paragraph text */
+.lead { font-size: 1.414rem; }
+
+/* Hug the block above you */
+.hug { margin-top: 0; }
