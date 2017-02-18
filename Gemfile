@@ -17,12 +17,12 @@ gem 'puma', '~> 3.0'
 # Assets
 #################################################
 
-gem 'bourbon'                 # A lightweight SASS toolset
-gem 'sass-rails', '~> 5.0'    # Use SCSS for stylesheets
-gem 'uglifier', '>= 1.3.0'    # Use Uglifier as compressor for JavaScript assets
-gem 'coffee-rails', '~> 4.2'  # Use CoffeeScript for .coffee assets and views
-gem 'jquery-rails'            # Use jquery as the JavaScript library
-
+gem 'bourbon'                       # A lightweight SASS toolset
+gem 'sass-rails', '~> 5.0'          # Use SCSS for stylesheets
+gem 'uglifier', '>= 1.3.0'          # Use Uglifier as compressor for JavaScript assets
+gem 'coffee-rails', '~> 4.2'        # Use CoffeeScript for .coffee assets and views
+gem 'jquery-rails'                  # Use jquery as the JavaScript library
+gem 'font-awesome-sass', '~> 4.7.0' #Font-Awesome Sass gem for use in Ruby/Rails projects
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 # gem 'turbolinks', '~> 5'
