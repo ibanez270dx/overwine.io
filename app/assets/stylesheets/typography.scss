@@ -30,11 +30,7 @@
 html {
   font-family: "Raleway";
   font-size: 137.5%;
-  -webkit-font-smoothing: antialiased;
-
-  // Make fonts render decently
-  @include font-feature-settings("liga");
-  @include font-feature-settings("pnum", "kern" false);
+  font-feature-settings: "liga", "pnum", "kern" false;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased !important;
   -moz-font-smoothing: antialiased !important;
