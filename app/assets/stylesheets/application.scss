@@ -2,6 +2,7 @@
 @import 'normalize';
 @import 'variables';
 @import 'typography';
+@import 'animations';
 
 body#application.index {
 
@@ -27,11 +28,13 @@ body#application.index {
     background-image: image-url('675073365.jpg');
     background-size: cover;
     background-position: 45% center;
+    overflow: auto;
     &:before {
       content: '';
       @include position(absolute, 0px);
       background-color: rgba(57, 40, 23, 0.64);
     }
+
     #jumbotron-content-wrapper {
       position: relative;
       padding: 3em 16px;
@@ -53,7 +56,8 @@ body#application.index {
         text-shadow: 0px 2px 1px #0C0707, 0px 2px 15px #0C0707, 0px 12px 25px #0C0707;
       }
     }
-    video {
+
+    #scroll-down, video {
       display: none;
     }
 
@@ -62,10 +66,12 @@ body#application.index {
     /*********************************************/
 
     @media(min-width: 560px) {
+      padding: 0px 16px;
       background: $dark-brown;
       &:before {
         background-color: rgba(96, 72, 47, 0.44);
       }
+
       #jumbotron-content-wrapper {
         @include position(absolute, 0px);
         display: flex;
@@ -82,6 +88,19 @@ body#application.index {
           line-height: 2rem;
         }
       }
+
+      #scroll-down {
+        display: block;
+        @include position(absolute, null 0px 16px 0px);
+        z-index: $z-index-jumbotron;
+        text-align: center;
+        animation: pulse 4s ease 3.5s infinite normal;
+        opacity: 0.5;
+        img {
+          width: 100px;
+        }
+      }
+
       video {
         display: block;
         @include position(absolute, 0px null null null);
