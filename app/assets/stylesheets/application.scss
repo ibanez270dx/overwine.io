@@ -3,8 +3,12 @@
 @import 'variables';
 @import 'typography';
 @import 'animations';
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 body#application.index {
+  position: relative;
+  h2, h3 { text-align: center; }
 
   a#brand {
     @include position(absolute, 0px null null 0px);
@@ -110,5 +114,96 @@ body#application.index {
         opacity: 0.5;
       }
     }
+  }
+  /*********************************************/
+  /* Mobile                                    */
+  /*********************************************/
+  section#who-we-are {
+    > div {
+      display: flex;
+      flex-direction: column;
+
+      figure {
+        flex: 1 1 100%;
+        align-self: center;
+        border-radius: 50%;
+        > div {
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          background-size: cover;
+          margin-right: auto;
+          margin-left: auto;
+          &.jeff {
+            background-image: asset_url('jeff.jpg');
+            background-position: 0px -35px;
+          }
+          &.gianna {
+            background-image: asset_url('gianna-linkedin.jpg')
+          }
+        }
+        figcaption {
+          span {
+            font-size: 1.5em;
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0px;
+
+            a {
+              background: #330036;
+              padding: 5px;
+            }
+          }
+        }
+      }
+    }
+    /*********************************************/
+    /* Desktop                                    */
+    /*********************************************/
+    @media(min-width: 560px) {
+      > div {
+        flex-direction: row;
+        justify-content: space-around;
+        figure {
+          flex: inherit;
+        }
+      }
+    }
+  }
+
+  section#our-projects {
+    ul.grid {
+      display: flex;
+      li figure {
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 200px;
+      }
+      li#super-pups {
+        flex: 1 1 40%;
+        figure {
+          background-image: asset_url('projects/super-pups.png');
+        }
+      }
+      li#isports {
+        flex: 1 1 60%;
+        figure {
+          background-image: asset_url('projects/isports.jpg');
+        }
+      }
+      li#ottos {
+        flex: 1 1 30%;
+        figure {
+          background-image: asset_url('projects/ottos.png');
+        }
+      }
+    }
+  }
+
+  footer {
+    height: 50px;
+    position: absolute;
+    width: 100%;
+    background: #2c3e50;
   }
 }

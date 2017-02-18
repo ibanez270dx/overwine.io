@@ -50,6 +50,7 @@ p {
 ul, ol {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+  list-style-type: none;
 }
 
 ul li, ol li {
@@ -124,3 +125,7 @@ code {
 
 /* Hug the block above you */
 .hug { margin-top: 0; }
+
+a { color: #FFF; }
+
+// C53500
