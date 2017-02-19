@@ -11,37 +11,87 @@
   <%= video_tag ["/videos/675073365.mp4", "/videos/675073365.webm"], poster: image_path('675073365.jpg'), autoplay: true, loop: true, muted: true %>
 </section>
 
-
 <section id="who-we-are">
-  <h2>Who We Are</h2>
-  <div>
-    <figure>
-      <div class='jeff'></div>
-      <figcaption>
+  <div class="container">
+    <h2>Who We Are</h2>
+    <p>
+      We're a pair of full-stack engineers specializing in Ruby on Rails located in the San Francisco Bay Area. Although
+      we both have full-time gigs in Silicon Valley, we also enjoy freelancing on the side which gives us a chance to work
+      on different ideas across industries.
+    </p>
+
+    <div class="profile-card">
+      <figure class="jeff"></figure>
+      <article>
         <h3>Jeff Miller</h3>
-        <span>
-          <%= link_to icon('github'), 'https://www.github.com/ibanez270dx' %>
-          <%= link_to icon('linkedin'), 'https://www.linkedin.com/in/ibanez270dx' %>
-          <%= link_to icon('envelope'), 'mailto:jeff@humani.se' %>
-        </span>
-        <hr>
-        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Curabitur aliquet quam id dui posuere blandit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
-      </figcaption>
-    </figure>
-    <figure><i class='fa fa-code fa-3x'></i></figure>
-    <figure>
-      <div class='gianna'></div>
-      <figcaption>
+        <p>Jeff is a Senior Software Engineer at <%= link_to 'Cognoa', 'https://www.cognoa.com', target: '_blank' %>, whose mission is to employ big data and machine learning to vastly improve early childhood detection of developmental disabilities including autism.</p>
+        <ul>
+          <li><%= link_to icon('github'), 'https://www.github.com/ibanez270dx' %></li>
+          <li><%= link_to icon('linkedin'), 'https://www.linkedin.com/in/ibanez270dx' %></li>
+          <li><%= link_to icon('envelope'), 'mailto:jeff@humani.se' %></li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="profile-card">
+      <figure class="gianna"></figure>
+      <article>
         <h3>Gianna Fusaro</h3>
-        <span>
-          <%= link_to icon('github'), 'https://www.github.com/giannafusaro' %>
-          <%= link_to icon('linkedin'), 'https://www.linkedin.com/in/giannafusaro' %>
-          <%= link_to icon('envelope'), 'mailto:gianna@gianna.codes' %>
-        </span>
-        <hr>
-        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Curabitur aliquet quam id dui posuere blandit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
-      </figcaption>
-    </figure>
+        <p>Gianna is a Full Stack Software Engineer at <%= link_to 'TCI', 'http://www.teachtci.com', target: '_blank' %>, where she designs and develops end-to-end features for the EdTech space.</p>
+        <ul>
+          <li><%= link_to icon('github'), 'https://www.github.com/giannafusaro' %></li>
+          <li><%= link_to icon('linkedin'), 'https://www.linkedin.com/in/giannafusaro' %></li>
+          <li><%= link_to icon('envelope'), 'mailto:gianna@gianna.codes' %></li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="what-we-do">
+  <div class="container">
+    <h2>What We Do</h2>
+    <p>
+      Our process is simple -- we offer requirements elicitation, designing, coding, testing and devops. We cover the full-cycle of development from
+      initial concept to deployment.
+    </p>
+
+    <ul id="services">
+      <li>
+        <%= icon('file-text') %>
+        <h4>1. Gather Requirements</h4>
+        <p>We'll work with you to distill your vision into a crystal-clear set of requirements so we can build your project exactly to spec.</p>
+      </li>
+      <li>
+        <%= icon('crop') %>
+        <h4>2. Prototype and Design</h4>
+        <p>Our web apps are designed to function seamlessly between desktop and mobile platforms. We'll make sure your MVP is an intuitive and memorable experience.</p>
+      </li>
+      <li>
+        <%= icon('code') %>
+        <h4>3. Code, Code, Code</h4>
+        <p>We build you a high-quality, rock-solid MVP and deliver a user experience that is engaging, powerful, and unique.</p>
+      </li>
+      <li>
+        <%= icon('rocket') %>
+        <h4>4. Launch!</h4>
+        <p>We will help you set up cloud hosting for your server so you don't have to worry about getting the application live.</p>
+      </li>
+    </ul>
+
+    <% if false %>
+      <ul id="tools">
+        <li><%= link_to content_tag(:i, nil, class: 'hu-photoshop-cutout'), '#' %></li>
+        <li><%= link_to content_tag(:i, nil, class: 'hu-illustrator-cutout'), '#' %></li>
+        <li><%= link_to content_tag(:i, nil, class: 'hu-ruby'), '#' %></li>
+        <li><%= link_to content_tag(:i, nil, class: 'hu-rails'), '#' %></li>
+        <li><%= link_to content_tag(:i, nil, class: 'hu-html5'), '#' %></li>
+        <li><%= link_to content_tag(:i, nil, class: 'hu-css3'), '#' %></li>
+        <li><%= link_to content_tag(:i, nil, class: 'hu-coffeescript'), '#' %></li>
+        <li><%= link_to content_tag(:i, nil, class: 'hu-github'), '#' %></li>
+        <li><%= link_to content_tag(:i, nil, class: 'hu-javascript-cutout'), '#' %></li>
+      </ul>
+    <% end %>
   </div>
 </section>
 
