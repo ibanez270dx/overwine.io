@@ -41,9 +41,14 @@ html {
 /* Copy & Lists                                */
 /***********************************************/
 
+a {
+  color: $red;
+  font-weight: 500;
+}
+
 p {
-  line-height: 1.5rem;
-  margin-top: 1.5rem;
+  line-height: 1.75rem;
+  margin-top: 1.75rem;
   margin-bottom: 0;
 }
 
@@ -125,7 +130,5 @@ code {
 
 /* Hug the block above you */
 .hug { margin-top: 0; }
-
-a { color: #FFF; }
 
 // C53500
