@@ -16,8 +16,8 @@
     <h2>Who We Are</h2>
     <p>
       We're a pair of full-stack engineers specializing in Ruby on Rails located in the San Francisco Bay Area. Although
-      we both have full-time gigs in Silicon Valley, we also enjoy freelancing on the side which gives us a chance to work
-      on different ideas across industries.
+      we both have full-time jobs in Silicon Valley, we also enjoy a little freelancing on the side which gives us a
+      chance to explore and work on different ideas across many industries.
     </p>
 
     <div class="profile-card">
@@ -26,9 +26,10 @@
         <h3>Jeff Miller</h3>
         <p>Jeff is a Senior Software Engineer at <%= link_to 'Cognoa', 'https://www.cognoa.com', target: '_blank' %>, whose mission is to employ big data and machine learning to vastly improve early childhood detection of developmental disabilities including autism.</p>
         <ul>
-          <li><%= link_to icon('github'), 'https://www.github.com/ibanez270dx' %></li>
-          <li><%= link_to icon('linkedin'), 'https://www.linkedin.com/in/ibanez270dx' %></li>
-          <li><%= link_to icon('envelope'), 'mailto:jeff@humani.se' %></li>
+          <li><%= link_to icon('home'), 'http://humani.se', target: '_blank' %></li>
+          <li><%= link_to icon('github'), 'https://www.github.com/ibanez270dx', target: '_blank' %></li>
+          <li><%= link_to icon('linkedin'), 'https://www.linkedin.com/in/ibanez270dx', target: '_blank' %></li>
+          <li><%= link_to icon('envelope'), 'mailto:jeff@humani.se', target: '_blank' %></li>
         </ul>
       </article>
     </div>
@@ -39,9 +40,10 @@
         <h3>Gianna Fusaro</h3>
         <p>Gianna is a Full Stack Software Engineer at <%= link_to 'TCI', 'http://www.teachtci.com', target: '_blank' %>, where she designs and develops end-to-end features for the EdTech space.</p>
         <ul>
-          <li><%= link_to icon('github'), 'https://www.github.com/giannafusaro' %></li>
-          <li><%= link_to icon('linkedin'), 'https://www.linkedin.com/in/giannafusaro' %></li>
-          <li><%= link_to icon('envelope'), 'mailto:gianna@gianna.codes' %></li>
+          <li><%= link_to icon('home'), 'http://www.gianna.codes', target: '_blank' %></li>
+          <li><%= link_to icon('github'), 'https://www.github.com/giannafusaro', target: '_blank' %></li>
+          <li><%= link_to icon('linkedin'), 'https://www.linkedin.com/in/giannafusaro', target: '_blank' %></li>
+          <li><%= link_to icon('envelope'), 'mailto:gianna@gianna.codes', target: '_blank' %></li>
         </ul>
       </article>
     </div>
@@ -52,8 +54,8 @@
   <div class="container">
     <h2>What We Do</h2>
     <p>
-      Our process is simple -- we offer requirements elicitation, designing, coding, testing and devops. We cover the full-cycle of development from
-      initial concept to deployment.
+      Our process is simple -- we take care of the full-cycle of web application development from initial concept to deployment.
+      This includes requirements elicitation, designing, coding, testing and devops services.
     </p>
 
     <ul id="services">
@@ -96,15 +98,42 @@
 </section>
 
 <section id='our-projects'>
-  <h2>Our Projects</h2>
-  <ul class='grid'>
-    <li id='super-pups'>
-      <figure></figure>
-    </li>
-    <li id='isports'><figure></figure></li>
-    <li id='ottos'><figure></figure></li>
-    <li id='humani'></li>
-    <li id='gianna-codes'></li>
-    <li id='proxy-it'></li>
-  </ul>
+  <div class="container">
+    <h2>Our Projects</h2>
+
+    <div class="project">
+      <figure>
+        <%= link_to image_tag('projects/superpups.png'), 'http://www.superpups.biz', target: '_blank' %>
+      </figure>
+      <div class="flex-wrapper">
+        <article>
+          <h3>SuperPups</h3>
+          <p>
+            Mostly informative website for San Mateo based pet salon, SuperPups. Includes a custom photo gallery and
+            custom content management system.
+          </p>
+          <%= link_to 'www.superpups.biz', 'http://www.superpups.biz', target: '_blank' %>
+        </article>
+      </div>
+    </div>
+
+    <div class="project">
+      <figure>
+        <%= link_to image_tag('projects/myprohero.png'), 'http://www.myprohero.com', target: '_blank' %>
+      </figure>
+      <div class="flex-wrapper">
+        <article>
+          <h3>MyProHero</h3>
+          <div>
+            Formerly iSportsDevelopment
+          </div>
+          <p>
+            Web app for facilitating and recording online sports coaching sessions through Google Hangouts.
+          </p>
+          <%= link_to 'www.myprohero.com', 'https://www.myprohero.com/', target: '_blank' %>
+        </article>
+      </div>
+    </div>
+
+  </div>
 </section>

@@ -26,6 +26,10 @@ body#application.index {
   .container {
     margin: auto;
     max-width: $layout-max-width;
+
+    & > h2 + p {
+      text-indent: 1rem;
+    }
   }
 
   /*********************************************/
@@ -104,6 +108,9 @@ body#application.index {
         text-align: center;
         animation: pulse 4s ease 3.5s infinite normal;
         opacity: 0.5;
+        &:focus {
+          outline: 0;
+        }
         img {
           width: 100px;
         }
@@ -125,13 +132,9 @@ body#application.index {
   /*********************************************/
 
   section#who-we-are {
-    padding: 1rem 1rem 64px;
+    padding: 1rem 1rem 4rem;
     background-color: #F2F2F2;
     overflow: auto;
-
-    h2 + p {
-      text-indent: 1rem;
-    }
 
     .profile-card {
       margin-top: 3rem;
@@ -166,7 +169,6 @@ body#application.index {
           font-size: 0.9rem;
           line-height: 1.5rem;
           text-align: left;
-          text-indent: 1rem;
         }
         ul {
           display: flex;
@@ -198,7 +200,6 @@ body#application.index {
     }
   }
 
-
   /*********************************************/
   /* What We Do                                */
   /*********************************************/
@@ -212,7 +213,7 @@ body#application.index {
       padding: 0px;
       list-style-type: none;
       li {
-        padding: 3rem 1rem;
+        padding: 2rem 1rem;
         text-align: center;
         i { font-size: 2.5rem; }
         h4 { margin-top: 0.25rem; }
@@ -266,35 +267,56 @@ body#application.index {
   /*********************************************/
 
   section#our-projects {
-    background-color: $light-brown;
+    background-color: #F2F2F2;
+    padding: 1rem;
     overflow: auto;
-    ul.grid {
-      display: flex;
-      li figure {
-        background-size: contain;
-        background-repeat: no-repeat;
-        height: 200px;
-      }
-      li#super-pups {
-        flex: 1 1 40%;
-        figure {
-          background-image: asset_url('projects/super-pups.png');
+
+    .project {
+      margin-top: 2rem;
+      figure {
+        margin: auto auto 1rem auto;
+        text-align: center;
+        img {
+          width: 100%;
+          margin: auto -16px;
         }
       }
-      li#isports {
-        flex: 1 1 60%;
-        figure {
-          background-image: asset_url('projects/isports.jpg');
+      article {
+        padding: 16px;
+        background-color: $white;
+        box-shadow: 0px 4px 20px -6px #bbb;
+        border-radius: 2px;
+        h3 {
+          margin-top: 0.2rem;
+          & + div {
+            font-size: 0.68rem;
+            font-style: italic;
+            text-align: center;
+          }
+        }
+        p {
+          margin: 1rem 0rem;
+          font-size: 0.85rem;
+          line-height: 1.35rem;
+        }
+        a:last-child {
+          display: block;
+          text-align: center;
         }
       }
-      li#ottos {
-        flex: 1 1 30%;
-        figure {
-          background-image: asset_url('projects/ottos.png');
-        }
+
+      @media(min-width: 560px) {
+        display: flex;
+        align-items: center;
+        figure { flex: 1 1 60%; }
+        .flex-wrapper { flex: 1 1 40%; }
       }
     }
   }
+
+  /*********************************************/
+  /* Footer                                    */
+  /*********************************************/
 
   footer {
     height: 50px;
