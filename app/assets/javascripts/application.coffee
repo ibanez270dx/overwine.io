@@ -9,6 +9,7 @@ $(document).on 'click', '#scroll-down', (event) ->
 
 # Remove arrow after scrolling at least 1/6th of jumbotron
 $(window).on 'scroll', (event) ->
-  if $(this).scrollTop() > ($('#jumbotron').height()/6)
-  then $('#scroll-down').fadeOut 'slow'
-  else $('#scroll-down').fadeIn 'slow'
+  if $(this).width() >= 560
+    if $(this).scrollTop() > ($('#jumbotron').height()/6)
+    then $('#scroll-down').fadeOut 'slow'
+    else $('#scroll-down').fadeIn 'slow'
