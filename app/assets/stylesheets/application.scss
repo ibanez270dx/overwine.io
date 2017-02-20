@@ -1,5 +1,6 @@
 @import 'bourbon';
 @import 'normalize';
+@import 'wtf-forms';
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
@@ -7,10 +8,11 @@
 @import 'typography';
 @import 'humanicons';
 @import 'animations';
+@import 'forms';
 
 body#application.index {
   position: relative;
-  h2, h3 { text-align: center; }
+  h1, h2, h3 { text-align: center; }
 
   a#brand {
     @include position(absolute, 0px null null 0px);
@@ -32,18 +34,22 @@ body#application.index {
     }
   }
 
+
+  & > section {
+    padding: 1rem;
+    overflow: auto;
+  }
+
   /*********************************************/
   /* Jumbotron                                 */
   /*********************************************/
 
   section#jumbotron {
     position: relative;
-    padding: 1rem;
     min-height: 100vh;
     background-image: image-url('675073365.jpg');
     background-size: cover;
     background-position: 45% center;
-    overflow: auto;
     &:before {
       content: '';
       @include position(absolute, 0px);
@@ -132,9 +138,10 @@ body#application.index {
   /*********************************************/
 
   section#who-we-are {
-    padding: 1rem 1rem 4rem;
-    background-color: #F2F2F2;
-    overflow: auto;
+    padding-bottom: 4rem;
+    background-color: #e2ded9;
+    background-image: image-url('otis-redding.png');
+    box-shadow: inset 0px 6px 20px -3px rgba(29, 22, 16, 0.65);
 
     .profile-card {
       margin-top: 3rem;
@@ -146,6 +153,7 @@ body#application.index {
         background-position: center center;
         border-radius: 2px;
         box-shadow: 0px 4px 20px -6px #bbb;
+        -webkit-filter: sepia(0.4);
         &.jeff { background-image: image-url('jeff.jpg'); }
         &.gianna { background-image: image-url('gianna.png'); }
         &:before {
@@ -178,6 +186,21 @@ body#application.index {
           li a {
             font-size: 1.5rem;
             color: $dark-brown;
+            transition: color 0.15s ease-in-out;
+            i {
+              transition: transform 0.15s ease-in-out;
+              vertical-align: middle;
+              &[class*="github"] {
+                font-size: 1.7rem;
+              }
+            }
+            &:hover {
+              cursor: pointer;
+              color: $red;
+              i {
+                transform: scale(1.5, 1.5);
+              }
+            }
           }
         }
       }
@@ -205,9 +228,7 @@ body#application.index {
   /*********************************************/
 
   section#what-we-do {
-    padding: 1rem;
     background-color: #fff;
-    overflow: auto;
 
     ul#services {
       padding: 0px;
@@ -267,9 +288,11 @@ body#application.index {
   /*********************************************/
 
   section#our-projects {
-    background-color: #F2F2F2;
-    padding: 1rem;
-    overflow: auto;
+    // background-color: $black;
+    background-image: radial-gradient(darken($deep-purple, 0%), darken($deep-purple, 5%));
+    h2 {
+      color: #fff;
+    }
 
     .project {
       margin-top: 2rem;
@@ -284,8 +307,8 @@ body#application.index {
       article {
         padding: 16px;
         background-color: $white;
-        box-shadow: 0px 4px 20px -6px #bbb;
         border-radius: 2px;
+        box-shadow: 0px 2px 10px 0px #000;
         h3 {
           margin-top: 0.2rem;
           & + div {
@@ -301,7 +324,10 @@ body#application.index {
         }
         a:last-child {
           display: block;
+          margin: 0px -16px -16px;
+          padding: 16px;
           text-align: center;
+          background-color: $light-grey;
         }
       }
 
@@ -315,13 +341,80 @@ body#application.index {
   }
 
   /*********************************************/
+  /* Contact Us                                */
+  /*********************************************/
+
+  section#contact-us {
+    padding-bottom: 2.5rem;
+    background-color: #e2ded9;
+    background-image: image-url('otis-redding.png');
+    text-align: center;
+
+    small {
+      font-style: italic;
+      color: #666;
+    }
+    form {
+      margin: 2rem auto auto;
+      max-width: 700px;
+      input[type="email"], textarea {
+        display: block;
+        margin-bottom: 1rem;
+        width: 100%;
+        border: 1px solid rgba(53, 45, 36, 0.30);
+        transition: border 0.2s ease-in-out;
+        &:active, &:focus {
+          border: 1px solid $brown;
+          box-shadow: none;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  /*********************************************/
   /* Footer                                    */
   /*********************************************/
 
   footer {
-    height: 50px;
-    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px;
     width: 100%;
-    background: #2c3e50;
+    background: $deep-brown;
+    overflow: auto;
+    text-align: center;
+
+    h4 {
+      margin: auto auto 1rem auto;
+      font-family: 'Raleway';
+      font-weight: 300;
+      color: $white;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+      margin: auto;
+      padding: 0px;
+      max-width: 400px;
+      list-style-type: none;
+
+      a {
+        color: rgba(#fff, 0.5);
+        font-size: 2rem;
+        transition: color 0.2s ease-in-out;
+        &:hover {
+          color: rgba(#fff, 1);
+        }
+      }
+    }
+
+    small {
+      @include position(absolute, null 0px 0.6rem 0px);
+      font-size: 0.6rem;
+      color: rgba(#fff, 0.6);
+    }
   }
 }

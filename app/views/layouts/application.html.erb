@@ -17,6 +17,17 @@
 
     <%= yield %>
 
-    <footer></footer>
+    <footer>
+      <div class="flex-container">
+        <h4>Everything is better OverWine.</h4>
+        <ul>
+          <li><%= link_to icon('facebook'), '#' %></li>
+          <li><%= link_to icon('twitter'), '#' %></li>
+          <li><%= link_to icon('linkedin'), '#' %></li>
+          <li><%= link_to icon('google-plus-official'), '#' %></li>
+        </ul>
+        <small>copyright <%= Time.now.year %> overwine.io</small>
+      </div>
+    </footer>
   </body>
 </html>
