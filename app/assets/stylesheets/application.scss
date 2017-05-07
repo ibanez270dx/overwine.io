@@ -10,6 +10,10 @@
 @import 'animations';
 @import 'forms';
 
+html {
+  background-color: $dark-brown;
+}
+
 body#application.index {
   position: relative;
   h1, h2, h3 { text-align: center; }
@@ -28,12 +32,10 @@ body#application.index {
   .container {
     margin: auto;
     max-width: $layout-max-width;
-
     & > h2 + p {
       text-indent: 1rem;
     }
   }
-
 
   & > section {
     padding: 1rem;
@@ -85,7 +87,7 @@ body#application.index {
     // desktop
     @media(min-width: 560px) {
       padding: 0px 1rem;
-      background: $dark-brown;
+      background: $black;
       &:before {
         background-color: rgba(96, 72, 47, 0.44);
       }
@@ -153,9 +155,9 @@ body#application.index {
         background-position: center center;
         border-radius: 2px;
         box-shadow: 0px 4px 20px -6px #bbb;
-        -webkit-filter: sepia(0.4);
+        -webkit-filter: sepia(0.3);
         &.jeff { background-image: image-url('jeff.jpg'); }
-        &.gianna { background-image: image-url('gianna.png'); }
+        &.gianna { background-image: image-url('gianna.jpg'); }
         &:before {
           content: "";
           display: block;
@@ -185,7 +187,7 @@ body#application.index {
           list-style: none;
           li a {
             font-size: 1.5rem;
-            color: $dark-brown;
+            color: $black;
             transition: color 0.15s ease-in-out;
             i {
               transition: transform 0.15s ease-in-out;
@@ -228,15 +230,18 @@ body#application.index {
   /*********************************************/
 
   section#what-we-do {
+    padding-bottom: 3rem;
     background-color: #fff;
 
     ul#services {
+      margin: auto;
       padding: 0px;
       list-style-type: none;
       li {
         padding: 2rem 1rem;
         text-align: center;
         i { font-size: 2.5rem; }
+        img { width: 256px; }
         h4 { margin-top: 0.25rem; }
         p {
           margin-top: 0.2rem;
@@ -249,7 +254,7 @@ body#application.index {
         display: flex;
         flex-wrap: wrap;
         li {
-          padding: 3rem 0px;
+          padding: 1rem 0px;
           flex: 1 1 50%;
           p {
             padding: 0px 2rem;
@@ -288,11 +293,8 @@ body#application.index {
   /*********************************************/
 
   section#our-projects {
-    // background-color: $black;
     background-image: radial-gradient(darken($deep-purple, 0%), darken($deep-purple, 5%));
-    h2 {
-      color: #fff;
-    }
+    h2 { color: #fff; }
 
     .project {
       margin-top: 2rem;
@@ -351,11 +353,14 @@ body#application.index {
     text-align: center;
 
     small {
+      display: block;
+      margin-bottom: 2rem;
       font-style: italic;
       color: #666;
     }
     form {
-      margin: 2rem auto auto;
+      position: relative;
+      margin: auto;
       max-width: 700px;
       input[type="email"], textarea {
         display: block;
@@ -368,6 +373,33 @@ body#application.index {
           box-shadow: none;
           outline: none;
         }
+      }
+
+      input[type="submit"] {
+        background-color: $deep-purple;
+        color: $white;
+        &[disabled] {
+          opacity: 0.2;
+        }
+      }
+
+      &:before {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        content: "Thanks for reaching out!\AWe'll be in touch within a few business days.";
+        @include position(absolute, 0px);
+        background-color: rgba($tan,0.85);
+        background-image: image-url('otis-redding.png');
+        white-space: pre;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.5s ease-in-out;
+      }
+
+      &.thank-you:before {
+        opacity: 1;
+        pointer-events: all;
       }
     }
   }
@@ -382,7 +414,7 @@ body#application.index {
     justify-content: center;
     min-height: 250px;
     width: 100%;
-    background: $deep-brown;
+    background: $dark-brown;
     overflow: auto;
     text-align: center;
 

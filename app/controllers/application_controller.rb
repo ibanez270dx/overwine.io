@@ -5,7 +5,10 @@ class ApplicationController < ActionController::Base
   end
 
   def contact
-
+    ApplicationMailer.lets_talk(params[:email], params[:message]).deliver_now
+    render js: <<-EOS
+      $('#contact-us form').addClass('thank-you');
+    EOS
   end
 
 end

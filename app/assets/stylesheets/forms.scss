@@ -7,12 +7,11 @@ form {
   input[type="password"],
   textarea {
     padding: 0.4em 0.6em;
-    border: 1px solid #d1d2d4;
+    border: 1px solid #bbb;
     border-radius: 2px;
     background-color: $white;
     -webkit-appearance: none;
-    font-family: 'Raleway', san-sarif;
-    font-weight: 200;
+    font-family: '-apple-system','Helvetica Neue',sans-serif;
     letter-spacing: 0.025em;
     box-sizing: border-box;
 
@@ -21,7 +20,7 @@ form {
     }
 
     &:active, &:focus {
-      border: 1px solid #00ff00;
+      border: 1px solid $brown;
       box-shadow: none;
       outline: none;
     }
@@ -34,15 +33,11 @@ form {
 
   input[type="submit"],
   button {
+    font-family: "Raleway";
     padding: 0.625rem 1rem;
     background: #bbb;
     border: 0px;
     border-radius: 2px;
-  }
-
-  label {
-    color: $dark-grey;
-    font-weight: 500;
   }
 }
 

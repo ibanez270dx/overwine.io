@@ -17,14 +17,17 @@
     <p>
       We're a pair of full-stack engineers specializing in Ruby on Rails located in the San Francisco Bay Area. Although
       we both have full-time jobs in Silicon Valley, we also enjoy a little freelancing on the side which gives us a
-      chance to explore and work on different ideas across many industries.
+      chance to explore new ideas and work across different industries.
     </p>
-
     <div class="profile-card">
       <figure class="jeff"></figure>
       <article>
         <h3>Jeff Miller</h3>
-        <p>Jeff is a Senior Software Engineer at <%= link_to 'Cognoa', 'https://www.cognoa.com', target: '_blank' %>, whose mission is to employ big data and machine learning to vastly improve early childhood detection of developmental disabilities including autism.</p>
+        <p>
+          Jeff is a Senior Software Engineer at <%= link_to 'Cognoa', 'https://www.cognoa.com', target: '_blank' %>, whose
+          mission is to employ big data and machine learning to vastly improve early childhood detection of developmental
+          disabilities including autism.
+        </p>
         <ul>
           <li><%= link_to icon('home'), 'http://humani.se', target: '_blank' %></li>
           <li><%= link_to icon('github'), 'https://www.github.com/ibanez270dx', target: '_blank' %></li>
@@ -38,7 +41,10 @@
       <figure class="gianna"></figure>
       <article>
         <h3>Gianna Fusaro</h3>
-        <p>Gianna is a Full Stack Software Engineer at <%= link_to 'TCI', 'http://www.teachtci.com', target: '_blank' %>, where she designs and develops end-to-end features for the EdTech space.</p>
+        <p>
+          Gianna is a Software Engineer at <%= link_to 'Wurl', 'http://www.wurl.com', target: '_blank' %>, where she
+          designs and develops tools to help bridge the gap between traditional cable TV and modern internet-enabled streaming services.
+        </p>
         <ul>
           <li><%= link_to icon('home'), 'http://www.gianna.codes', target: '_blank' %></li>
           <li><%= link_to icon('github'), 'https://www.github.com/giannafusaro', target: '_blank' %></li>
@@ -60,24 +66,24 @@
 
     <ul id="services">
       <li>
-        <%= icon('file-text') %>
+        <%= image_tag('gifs/animat-pencil-color.gif') %>
         <h4>1. Gather Requirements</h4>
-        <p>We'll work with you to distill your vision into a crystal-clear set of requirements so we can build your project exactly to spec.</p>
+        <p>We work with you to distill your vision into a crystal-clear set of requirements and deliverables so we can build you the best possible product.</p>
       </li>
       <li>
-        <%= icon('crop') %>
+        <%= image_tag('gifs/animat-responsive-color.gif') %>
         <h4>2. Prototype and Design</h4>
-        <p>Our web apps are designed to function seamlessly between desktop and mobile platforms. We'll make sure your MVP is an intuitive and memorable experience.</p>
+        <p>We ensure your MVP provides an intuitive and memorable experience while functioning seamlessly across all devices and platforms.</p>
       </li>
       <li>
-        <%= icon('code') %>
+        <%= image_tag('gifs/animat-diamond-color.gif') %>
         <h4>3. Code, Code, Code</h4>
-        <p>We build you a high-quality, rock-solid MVP and deliver a user experience that is engaging, powerful, and unique.</p>
+        <p>Using industry-leading best practices, we build a rock-solid MVP that you can test with your target audience or even pitch directly to investors.</p>
       </li>
       <li>
-        <%= icon('rocket') %>
+        <%= image_tag('gifs/animat-rocket-color.gif') %>
         <h4>4. Launch!</h4>
-        <p>We will help you set up cloud hosting for your server so you don't have to worry about getting the application live.</p>
+        <p>Gain valuable insights while attracting investors, cofounders, and early employees with a working MVP deployed on scalable cloud-based hosting.</p>
       </li>
     </ul>
 
@@ -109,7 +115,7 @@
         <article>
           <h3>SuperPups</h3>
           <p>
-            Mostly informative website for San Mateo based pet salon, SuperPups. Includes a custom photo gallery and
+            Small business website for San Mateo based pet salon, SuperPups. Includes a custom photo gallery and
             custom content management system.
           </p>
           <%= link_to 'www.superpups.biz', 'http://www.superpups.biz', target: '_blank' %>
@@ -128,7 +134,7 @@
             Formerly iSportsDevelopment
           </div>
           <p>
-            Web app for facilitating and recording online sports coaching sessions through Google Hangouts.
+            Web app for facilitating and recording live online sports coaching sessions through Google Hangouts and YouTube.
           </p>
           <%= link_to 'www.myprohero.com', 'https://www.myprohero.com/', target: '_blank' %>
         </article>
@@ -142,12 +148,11 @@
     <h1>Let's Talk</h1>
     <p>
       Get a free quote for web application design and development<br />
-      <small>* Don't worry, we hate spam too. We won't share your email with anyone</small>
+      <small>Don't worry, we hate spam too. We won't share your email with anyone.</small>
     </p>
-
-    <%= form_tag contact_path do %>
+    <%= form_tag contact_path, remote: true do %>
       <%= email_field_tag :email, nil, placeholder: 'Your email address' %>
-      <%= text_area_tag :message, nil, placeholder: 'A breif description', rows: 8 %>
+      <%= text_area_tag :message, nil, placeholder: 'A brief description of your project', rows: 8 %>
       <%= submit_tag 'Send' %>
     <% end %>
   </div>
