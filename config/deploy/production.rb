@@ -1,4 +1,4 @@
-server "overwine",
+server "overwine.io",
   user: fetch(:user),
   roles: %w{app web db},
   ssh_options: {
