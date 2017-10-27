@@ -2,7 +2,7 @@
 lock "3.10.0"
 
 # Name and Repo
-set :application, "overwine"
+set :application, "overwine.io"
 set :repo_url, "git@github.com:ibanez270dx/overwine.git"
 set :branch, "master"
 
