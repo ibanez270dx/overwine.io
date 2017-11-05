@@ -2,9 +2,13 @@
 lock "3.10.0"
 
 # Name and Repo
-set :application, "overwine.io"
+set :application, "overwine"
 set :repo_url, "git@github.com:ibanez270dx/overwine.git"
 set :branch, "master"
+
+# Nginx
+set :nginx_redirect_from_www, true
+set :nginx_server_name, "overwine.io"
 
 # App Location
 set :user, "deploy"
