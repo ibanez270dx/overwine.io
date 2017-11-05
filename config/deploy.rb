@@ -10,6 +10,11 @@ set :branch, "master"
 set :nginx_redirect_from_www, true
 set :nginx_server_name, "overwine.io"
 
+# SSL
+set :nginx_use_ssl, true
+set :nginx_ssl_certificate, "/etc/letsencrypt/live/humani.se/fullchain.pem"
+set :nginx_ssl_certificate_key, "/etc/letsencrypt/live/humani.se/privkey.pem"
+
 # App Location
 set :user, "deploy"
 set :deploy_to, "/home/#{fetch(:user)}/overwine"
@@ -29,3 +34,7 @@ set :rbenv_ruby, File.read(".ruby-version").strip
 
 # Puma
 set :puma_init_active_record, true
+
+# Update config and bounce NGINX
+after "puma:restart", "puma:nginx_config"
+after "puma:nginx_config", "nginx:restart"
