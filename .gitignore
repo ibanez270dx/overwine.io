@@ -43,3 +43,6 @@ bower.json
 
 # mac
 \.DS_Store
+
+# don't share db config 
+config/database.yml
