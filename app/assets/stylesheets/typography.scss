@@ -3,29 +3,29 @@
   https://github.com/devinhunt/typebase.css
 */
 
-@include font-face("Bitter", "bitter/Bitter-Regular", $style: normal, $asset-pipeline: true, $file-formats: ttf);
-@include font-face("Bitter", "bitter/Bitter-Italic",  $style: italic, $asset-pipeline: true, $file-formats: ttf);
-@include font-face("Bitter", "bitter/Bitter-Bold",    $style: bold,   $asset-pipeline: true, $file-formats: ttf);
+@include font-face("Bitter", "bitter/Bitter-Regular", $file-formats: ttf, $asset-pipeline: true) { font-style: normal; };
+@include font-face("Bitter", "bitter/Bitter-Italic",  $file-formats: ttf, $asset-pipeline: true) { font-style: italic; };
+@include font-face("Bitter", "bitter/Bitter-Bold",    $file-formats: ttf, $asset-pipeline: true) { font-style: bold; };
 
-@include font-face("Raleway", "raleway/Raleway-Thin",       $weight: 100, $style: normal, $asset-pipeline: true, $file-formats: ttf);
-@include font-face("Raleway", "raleway/Raleway-ExtraLight", $weight: 200, $style: normal, $asset-pipeline: true, $file-formats: ttf);
-@include font-face("Raleway", "raleway/Raleway-Light",      $weight: 300, $style: normal, $asset-pipeline: true, $file-formats: ttf);
-@include font-face("Raleway", "raleway/Raleway-Regular",    $weight: 400, $style: normal, $asset-pipeline: true, $file-formats: ttf);
-@include font-face("Raleway", "raleway/Raleway-Medium",     $weight: 500, $style: normal, $asset-pipeline: true, $file-formats: ttf);
-@include font-face("Raleway", "raleway/Raleway-SemiBold",   $weight: 600, $style: bold,   $asset-pipeline: true, $file-formats: ttf);
-@include font-face("Raleway", "raleway/Raleway-Bold",       $weight: 700, $style: bold,   $asset-pipeline: true, $file-formats: ttf);
-@include font-face("Raleway", "raleway/Raleway-ExtraBold",  $weight: 800, $style: bold,   $asset-pipeline: true, $file-formats: ttf);
-@include font-face("Raleway", "raleway/Raleway-Black",      $weight: 900, $style: bold,   $asset-pipeline: true, $file-formats: ttf);
+@include font-face("Raleway", "raleway/Raleway-Thin",       $file-formats: ttf, $asset-pipeline: true) { font-weight: 100; font-style: normal; }
+@include font-face("Raleway", "raleway/Raleway-ExtraLight", $file-formats: ttf, $asset-pipeline: true) { font-weight: 200; font-style: normal; }
+@include font-face("Raleway", "raleway/Raleway-Light",      $file-formats: ttf, $asset-pipeline: true) { font-weight: 300; font-style: normal; }
+@include font-face("Raleway", "raleway/Raleway-Regular",    $file-formats: ttf, $asset-pipeline: true) { font-weight: 400; font-style: normal; }
+@include font-face("Raleway", "raleway/Raleway-Medium",     $file-formats: ttf, $asset-pipeline: true) { font-weight: 500; font-style: normal; }
+@include font-face("Raleway", "raleway/Raleway-SemiBold",   $file-formats: ttf, $asset-pipeline: true) { font-weight: 600; font-style: bold; }
+@include font-face("Raleway", "raleway/Raleway-Bold",       $file-formats: ttf, $asset-pipeline: true) { font-weight: 700; font-style: bold; }
+@include font-face("Raleway", "raleway/Raleway-ExtraBold",  $file-formats: ttf, $asset-pipeline: true) { font-weight: 800; font-style: bold; }
+@include font-face("Raleway", "raleway/Raleway-Black",      $file-formats: ttf, $asset-pipeline: true) { font-weight: 900; font-style: bold; }
 
-@include font-face("Raleway", "raleway/Raleway-ThinItalic",       $weight: 100, $style: italic,  $asset-pipeline: true, $file-formats: ttf);
-@include font-face("Raleway", "raleway/Raleway-ExtraLightItalic", $weight: 200, $style: italic,  $asset-pipeline: true, $file-formats: ttf);
-@include font-face("Raleway", "raleway/Raleway-LightItalic",      $weight: 300, $style: italic,  $asset-pipeline: true, $file-formats: ttf);
-@include font-face("Raleway", "raleway/Raleway-Italic",           $weight: 400, $style: italic,  $asset-pipeline: true, $file-formats: ttf);
-@include font-face("Raleway", "raleway/Raleway-MediumItalic",     $weight: 500, $style: italic,  $asset-pipeline: true, $file-formats: ttf);
-@include font-face("Raleway", "raleway/Raleway-SemiBoldItalic",   $weight: 600, $style: oblique, $asset-pipeline: true, $file-formats: ttf);
-@include font-face("Raleway", "raleway/Raleway-BoldItalic",       $weight: 700, $style: oblique, $asset-pipeline: true, $file-formats: ttf);
-@include font-face("Raleway", "raleway/Raleway-ExtraBoldItalic",  $weight: 800, $style: oblique, $asset-pipeline: true, $file-formats: ttf);
-@include font-face("Raleway", "raleway/Raleway-BlackItalic",      $weight: 900, $style: oblique, $asset-pipeline: true, $file-formats: ttf);
+@include font-face("Raleway", "raleway/Raleway-ThinItalic",       $file-formats: ttf, $asset-pipeline: true) { font-weight: 100; font-style: italic; }
+@include font-face("Raleway", "raleway/Raleway-ExtraLightItalic", $file-formats: ttf, $asset-pipeline: true) { font-weight: 200; font-style: italic; }
+@include font-face("Raleway", "raleway/Raleway-LightItalic",      $file-formats: ttf, $asset-pipeline: true) { font-weight: 300; font-style: italic; }
+@include font-face("Raleway", "raleway/Raleway-Italic",           $file-formats: ttf, $asset-pipeline: true) { font-weight: 400; font-style: italic; }
+@include font-face("Raleway", "raleway/Raleway-MediumItalic",     $file-formats: ttf, $asset-pipeline: true) { font-weight: 500; font-style: italic; }
+@include font-face("Raleway", "raleway/Raleway-SemiBoldItalic",   $file-formats: ttf, $asset-pipeline: true) { font-weight: 600; font-style: oblique; }
+@include font-face("Raleway", "raleway/Raleway-BoldItalic",       $file-formats: ttf, $asset-pipeline: true) { font-weight: 700; font-style: oblique; }
+@include font-face("Raleway", "raleway/Raleway-ExtraBoldItalic",  $file-formats: ttf, $asset-pipeline: true) { font-weight: 800; font-style: oblique; }
+@include font-face("Raleway", "raleway/Raleway-BlackItalic",      $file-formats: ttf, $asset-pipeline: true) { font-weight: 900; font-style: oblique; }
 
 html {
   font-family: "Raleway";
@@ -130,5 +130,3 @@ code {
 
 /* Hug the block above you */
 .hug { margin-top: 0; }
-
-// C53500
