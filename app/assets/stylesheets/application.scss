@@ -79,6 +79,10 @@ body#application.index {
       }
     }
 
+    #jumbotron-social {
+      text-align: center;
+    }
+
     #scroll-down, video {
       display: none;
     }
@@ -106,6 +110,13 @@ body#application.index {
           font-size: 1.25rem;
           line-height: 2rem;
         }
+      }
+
+      #jumbotron-social {
+        position: relative;
+        padding: 1rem;
+        text-align: right;
+        z-index: 2147483647;
       }
 
       #scroll-down {
