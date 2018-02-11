@@ -11,4 +11,10 @@ class ApplicationController < ActionController::Base
     EOS
   end
 
+  def sitemap
+    respond_to do |format|
+      format.xml
+    end
+  end
+
 end
