@@ -81,6 +81,33 @@ body#application.index {
 
     #jumbotron-social {
       text-align: center;
+
+      #facebook-page-button {
+        position: relative;
+        top: -5px; left: -3px;
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 5px 4px 0px 6px;
+        height: 28px;
+        border: 1px solid #4267b2;
+        border-radius: 4px;
+        background: #4267b2;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: $white;
+        text-decoration: none;
+        transition: all 0.05s;
+        
+        &:hover {
+          background: #365899;
+          border: 1px solid #365899;
+        }
+        i.fa {
+          margin-right: 3px;
+          font-size: 15px;
+        }
+      }
     }
 
     #scroll-down, video {
