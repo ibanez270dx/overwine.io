@@ -21,12 +21,14 @@ gem "sass-rails", "~> 5.0"            # Use SCSS for stylesheets
 gem "uglifier", ">= 1.3.0"            # Use Uglifier as compressor for JavaScript assets
 gem "coffee-rails", "~> 4.2"          # Use CoffeeScript for .coffee assets and views
 gem "jquery-rails"                    # Use jquery as the JavaScript library
-gem "font-awesome-sass", "~> 4.7.0"   # Font-Awesome Sass gem for use in Ruby/Rails projects
+gem "font-awesome-sass", "~> 5.0.6"   # Font-Awesome Sass gem for use in Ruby/Rails projects
 gem "mailgun-ruby", "~> 1.1.4"        # Mailgun's Official Ruby Library
+gem "faraday"                         # Simple, but flexible HTTP client library, with support for multiple backends.
+gem "sucker_punch", "~> 2.0"          # A single-process Ruby asynchronous processing library
 
 group :development, :test do
-  # Call "byebug" anywhere in the code to stop execution and get a debugger console
-  gem "byebug", platform: :mri
+  gem "pry-rails"                      # Use pry for rails console + debugging
+  gem "rubocop"                        # Static code analyzer, based on the community Ruby style guide
 end
 
 group :development do

@@ -371,10 +371,12 @@ body#application.index {
       font-style: italic;
       color: #666;
     }
+
     form {
       position: relative;
       margin: auto;
       max-width: 700px;
+
       input[type="email"], textarea {
         display: block;
         margin-bottom: 1rem;
@@ -388,6 +390,10 @@ body#application.index {
         }
       }
 
+      input[type="email"], textarea, .flex-container {
+        transition: all 0.3s ease-in-out 0.5s;
+      }
+
       input[type="submit"] {
         background-color: $deep-purple;
         color: $white;
@@ -396,23 +402,49 @@ body#application.index {
         }
       }
 
-      &:before {
+      &:before, &:after {
         display: flex;
         align-items: center;
         justify-content: center;
-        content: "Thanks for reaching out!\AWe'll be in touch within a few business days.";
-        @include position(absolute, 0px);
-        background-color: rgba($tan,0.85);
-        background-image: image-url('otis-redding.png');
+        position: absolute;
+        top: -1rem; right: -1rem; bottom: -1rem; left: -1rem;
+        z-index: 99999;
+        padding-bottom: 8rem;
         white-space: pre;
         opacity: 0;
         pointer-events: none;
+        font-weight: 700;
         transition: all 0.5s ease-in-out;
       }
 
-      &.thank-you:before {
+      &:before {
+        content: "Thanks for reaching out!\AWe'll be in touch within a few business days.";
+      }
+
+      &:after {
+        content: "Verification failed! Please try again.";
+        color: $red;
+      }
+
+      &.thank-you, &.verify-failed {
+        input[type="email"], textarea, .flex-container {
+          filter: blur(6px) saturate(30%);
+          transition-delay: 0s;
+          opacity: 0.4;
+        }
+      }
+
+      &.thank-you:before, &.verify-failed:after {
         opacity: 1;
         pointer-events: all;
+      }
+    }
+
+    @media(min-width: 560px) {
+      .flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
       }
     }
   }

@@ -9,7 +9,7 @@
   </div>
   <div id="jumbotron-social">
     <div class="fb-like" data-href="https://overwine.io" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="true"></div>
-    <%= link_to icon('flag', "Visit on FB"), 'https://www.facebook.com/overwine.io', id: "facebook-page-button", target: :blank %>
+    <%= link_to icon("fas", "flag", "Visit on FB"), 'https://www.facebook.com/overwine.io', id: "facebook-page-button", target: :blank %>
   </div>
   <%= link_to image_tag("arrow-down.svg"), '#', id: 'scroll-down' %>
   <%= video_tag ["/videos/675073365.mp4", "/videos/675073365.webm"], poster: image_path('675073365.jpg'), autoplay: true, loop: true, muted: true %>
@@ -33,10 +33,10 @@
           disabilities including autism.
         </p>
         <ul>
-          <li><%= link_to icon('home'), 'https://humani.se', target: '_blank' %></li>
-          <li><%= link_to icon('github'), 'https://www.github.com/ibanez270dx', target: '_blank' %></li>
-          <li><%= link_to icon('linkedin'), 'https://www.linkedin.com/in/ibanez270dx', target: '_blank' %></li>
-          <li><%= link_to icon('envelope'), 'mailto:jeff@humani.se', target: '_blank' %></li>
+          <li><%= link_to icon("fas", "home"), 'https://humani.se', target: '_blank' %></li>
+          <li><%= link_to icon("fab", "github"), 'https://www.github.com/ibanez270dx', target: '_blank' %></li>
+          <li><%= link_to icon("fab", "linkedin"), 'https://www.linkedin.com/in/ibanez270dx', target: '_blank' %></li>
+          <li><%= link_to icon("fas", "envelope"), 'mailto:jeff@humani.se', target: '_blank' %></li>
         </ul>
       </article>
     </div>
@@ -50,10 +50,10 @@
           designs and develops tools to help bridge the gap between traditional cable TV and modern internet-enabled streaming services.
         </p>
         <ul>
-          <li><%= link_to icon('home'), 'http://www.gianna.codes', target: '_blank' %></li>
-          <li><%= link_to icon('github'), 'https://www.github.com/giannafusaro', target: '_blank' %></li>
-          <li><%= link_to icon('linkedin'), 'https://www.linkedin.com/in/giannafusaro', target: '_blank' %></li>
-          <li><%= link_to icon('envelope'), 'mailto:gianna@gianna.codes', target: '_blank' %></li>
+          <li><%= link_to icon("fas", "home"), 'http://www.gianna.codes', target: '_blank' %></li>
+          <li><%= link_to icon("fab", "github"), 'https://www.github.com/giannafusaro', target: '_blank' %></li>
+          <li><%= link_to icon("fab", "linkedin"), 'https://www.linkedin.com/in/giannafusaro', target: '_blank' %></li>
+          <li><%= link_to icon("fas", "envelope"), 'mailto:gianna@gianna.codes', target: '_blank' %></li>
         </ul>
       </article>
     </div>
@@ -141,9 +141,12 @@
       <small>Don't worry, we hate spam too. We won't share your email with anyone.</small>
     </p>
     <%= form_tag contact_path, remote: true do %>
-      <%= email_field_tag :email, nil, placeholder: 'Your email address' %>
-      <%= text_area_tag :message, nil, placeholder: 'A brief description of your project', rows: 8 %>
-      <%= submit_tag 'Send' %>
+      <%= email_field_tag :email, nil, placeholder: "Your email address" %>
+      <%= text_area_tag :message, nil, placeholder: "Give us a brief description of your project and we'll get back to you as soon as we can.", rows: 8 %>
+      <div class="flex-container">
+        <div class="g-recaptcha" data-sitekey="6LeZt0UUAAAAAMzo82yoKNJFvQGt9okRI3zj21Xt"></div><br />
+        <%= submit_tag "Send Message", data: { disable_with: icon("fas", "spinner", "Sending...", class: "fa-spin").html_safe } %>
+      </div>
     <% end %>
   </div>
 </section>

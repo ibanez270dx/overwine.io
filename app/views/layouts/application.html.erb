@@ -41,6 +41,8 @@
     </script>
 
     <%= javascript_include_tag 'application' %>
+
+    <script src='https://www.google.com/recaptcha/api.js'></script>
   </head>
 
   <body id="<%= page_id %>" class="<%= page_classes %>">
@@ -69,9 +71,9 @@
       <div class="flex-container">
         <h4>Everything is better OverWine.</h4>
         <ul>
-          <li><%= link_to icon('facebook'), 'https://www.facebook.com/overwine.io', target: :blank %></li>
-          <li><%= link_to icon('twitter'), 'https://twitter.com/intent/tweet?url=https://overwine.io', target: :blank %></li>
-          <li><%= link_to icon('google-plus-official'), 'https://plus.google.com/share?url=https://overwine.io', target: :blank %></li>
+          <li><%= link_to icon("fab", "facebook"), 'https://www.facebook.com/overwine.io', target: :blank %></li>
+          <li><%= link_to icon("fab", "twitter"), 'https://twitter.com/intent/tweet?url=https://overwine.io', target: :blank %></li>
+          <li><%= link_to icon("fab", "google-plus"), 'https://plus.google.com/share?url=https://overwine.io', target: :blank %></li>
         </ul>
         <small>copyright <%= Time.now.year %> OverWine.io</small>
       </div>
