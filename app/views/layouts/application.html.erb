@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>OverWine.io</title>
+    <title>OverWine.io | Web Application Design & Development - Let us build your next MVP.</title>
     <%= csrf_meta_tags %>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="We're a pair of full-stack software engineers specializing in web application development located in the San Francisco Bay Area. With over 10 years of experience working with startups and small businesses alike, we'll help get your idea off the ground and bring it to the next level.">
+    <meta name="author" content="OverWine.io">
+    <meta name="keywords" content="OverWine, web, development, design, consulting, app, application, rails, ruby, mvp, minimum, viable, product, minimum viable product">
+		<meta property="og:title" content="OverWine.io | Let us build your next MVP." />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://overwine.io" />
+		<meta property="og:image" content="<%= image_url "overwine-social.jpg" %>" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Top-tier web application design & development from the heart of Silicon Valley." />
+    <meta property="og:url" content="https://overwine.io/" />
+    <meta property="og:site_name" content="OverWine.io" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="OverWine.io | Let us build your next MVP." />
+    <meta name="twitter:description" content="Top-tier web application design & development from the heart of Silicon Valley." />
+    <meta name="twitter:image" content="<%= image_url "overwine-social.jpg" %>" />
+		<link rel="canonical" href="https://overwine.io/" />
+
     <%= tag :link, rel: "icon", type: "image/png", href: image_path("favicon.png") %>
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
@@ -26,7 +42,7 @@
           <li><%= link_to icon('twitter'), 'https://twitter.com/intent/tweet?url=http://overwine.io', target: :blank %></li>
           <li><%= link_to icon('google-plus-official'), 'https://plus.google.com/share?url=http://overwine.io', target: :blank %></li>
         </ul>
-        <small>copyright <%= Time.now.year %> overwine.io</small>
+        <small>copyright <%= Time.now.year %> OverWine.io</small>
       </div>
     </footer>
   </body>
