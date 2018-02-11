@@ -1,28 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>OverWine.io | Relax. Let us build your next MVP.</title>
+
     <%= csrf_meta_tags %>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="With over 10 years of experience working with startups and small businesses alike, we'll get your idea off the ground and build a fully-functional MVP.">
-    <meta name="author" content="OverWine.io">
-    <meta name="keywords" content="OverWine, web, development, design, consulting, app, application, rails, ruby, mvp, minimum, viable, product, minimum viable product, dev, devops">
-		<meta property="og:title" content="OverWine.io | Relax. Let us build your next MVP." />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://overwine.io" />
-		<meta property="og:image" content="<%= image_url "social.jpg" %>" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content="Top-tier web application design & development from the heart of Silicon Valley." />
-    <meta property="og:url" content="https://overwine.io/" />
-    <meta property="og:site_name" content="OverWine.io" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="OverWine.io | Relax. Let us build your next MVP." />
-    <meta name="twitter:description" content="Top-tier web application design & development from the heart of Silicon Valley." />
-    <meta name="twitter:image" content="<%= image_url "social.jpg" %>" />
-		<link rel="canonical" href="https://overwine.io/" />
-    <%= tag :link, rel: "icon", type: "image/png", href: image_path("favicon.png") %>
+    <%= tag :meta, charset: "utf-8" %>
+
+    <%= tag :meta, name: "viewport",    content: "width=device-width, initial-scale=1, shrink-to-fit=no" %>
+    <%= tag :meta, name: "description", content: "With over 10 years of experience working with startups and small businesses alike, we'll get your idea off the ground and build a fully-functional MVP." %>
+    <%= tag :meta, name: "author",      content: "OverWine.io" %>
+    <%= tag :meta, name: "keywords",    content: "OverWine, web, development, design, consulting, app, application, rails, ruby, mvp, minimum, viable, product, minimum viable product, dev, devops" %>
+
+    <%= tag :meta, property: "fb:app_id",       content: "1593796620709372" %>
+    <%= tag :meta, property: "og:site_name",    content: "OverWine.io" %>
+    <%= tag :meta, property: "og:url",          content: "https://#{request.host_with_port}" %>
+    <%= tag :meta, property: "og:image",        content: image_url("social.jpg") %>
+		<%= tag :meta, property: "og:title",        content: "OverWine.io | Relax. Let us build your next MVP." %>
+    <%= tag :meta, property: "og:description",  content: "Top-tier web application design & development from the heart of Silicon Valley." %>
+		<%= tag :meta, property: "og:type",         content: "website" %>
+    <%= tag :meta, property: "og:locale",       content: "en_US" %>
+
+    <%= tag :meta, name: "twitter:card",        content: "summary_large_image" %>
+    <%= tag :meta, name: "twitter:title",       content: "OverWine.io | Relax. Let us build your next MVP." %>
+    <%= tag :meta, name: "twitter:description", content: "Top-tier web application design & development from the heart of Silicon Valley." %>
+    <%= tag :meta, name: "twitter:image",       content: image_url("social.jpg") %>
+
+    <%= tag :link, rel: "canonical", href: "https://#{request.host_with_port}/" %>
+    <%= tag :link, rel: "icon",      href: image_path("favicon.png"), type: "image/png" %>
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
 
@@ -33,13 +37,31 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'UA-113875556-1');
-      gtag('config', 'GA_TRACKING_ID', { 'link_attribution': true });  // Enable enhanced link attribution  
+      gtag('config', 'GA_TRACKING_ID', { 'link_attribution': true });  // Enable enhanced link attribution
     </script>
 
     <%= javascript_include_tag 'application' %>
   </head>
 
   <body id="<%= page_id %>" class="<%= page_classes %>">
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1593796620709372',
+          xfbml      : true,
+          version    : 'v2.12'
+        });
+        FB.AppEvents.logPageView();
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
 
     <%= yield %>
 
