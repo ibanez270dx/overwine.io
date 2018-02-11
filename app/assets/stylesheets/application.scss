@@ -395,7 +395,7 @@ body#application.index {
         transition: all 0.3s ease-in-out 0.5s;
       }
 
-      input[type="submit"] {
+      button {
         background-color: $deep-purple;
         color: $white;
         &[disabled] {

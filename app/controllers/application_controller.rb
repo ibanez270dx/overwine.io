@@ -8,11 +8,12 @@ class ApplicationController < ActionController::Base
     render js: if Google::Recaptcha.verify(params["g-recaptcha-response"])
       ApplicationMailer.lets_talk(params[:email], params[:message]).deliver_later
       <<~JS
-        $("#contact-us form").addClass("thank-you");
+        $("form#contact").addClass("thank-you");
+        $("form#contact button").removeClass("fa-spin");
       JS
     else
       <<~JS
-        $("#contact-us form").addClass("verify-failed").delay(2000).queue(function(){
+        $("form#contact").addClass("verify-failed").delay(2000).queue(function(){
           $(this).removeClass("verify-failed").dequeue();
         });
       JS

@@ -140,12 +140,12 @@
       Get a free quote for web application design and development<br />
       <small>Don't worry, we hate spam too. We won't share your email with anyone.</small>
     </p>
-    <%= form_tag contact_path, remote: true do %>
+    <%= form_tag contact_path, id: "contact", remote: true do %>
       <%= email_field_tag :email, nil, placeholder: "Your email address" %>
       <%= text_area_tag :message, nil, placeholder: "Give us a brief description of your project and we'll get back to you as soon as we can.", rows: 8 %>
       <div class="flex-container">
         <div class="g-recaptcha" data-sitekey="6LeZt0UUAAAAAMzo82yoKNJFvQGt9okRI3zj21Xt"></div><br />
-        <%= submit_tag "Send Message", data: { disable_with: icon("fas", "spinner", "Sending...", class: "fa-spin").html_safe } %>
+        <%= button_tag "Send Message", data: { disable_with: icon("fas", "spinner", "Sending...", class: "fa-spin").html_safe } %>
       </div>
     <% end %>
   </div>
