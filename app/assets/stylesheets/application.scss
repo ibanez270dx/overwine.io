@@ -261,30 +261,6 @@ body#application.index {
         }
       }
     }
-
-    ul#tools {
-      display: flex;
-      justify-content: space-between;
-      padding: 0px;
-      a {
-        font-size: 3.5rem;
-        text-decoration: none;
-        i {
-          color: rgba(0,0,0,0.25);
-          transition: color 0.3s;
-        }
-        &:hover {
-          i[class*="photoshop"] { color: #00a4e4; }
-          i[class*="illustrator"] { color: #fbb034; }
-          i[class*="ruby"] { color: #cc342d; }
-          i[class*="rails"] { color: #CC0000; }
-          i[class*="html5"] { color: #E34C26; }
-          i[class*="css3"] { color: #2162AF; }
-          i[class*="coffeescript"] { color: #28334C; }
-          i[class*="javascript"] { color: #F0DB4F; }
-        }
-      }
-    }
   }
 
   /*********************************************/
