@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>OverWine.io | Custom Web Application Design & Development</title>
+    <title>OverWine.io | Relax. Let us build your next MVP.</title>
     <%= csrf_meta_tags %>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="With over 10 years of experience working with startups and small businesses alike, we'll help get your idea off the ground and bring it to the next level.">
+    <meta name="description" content="With over 10 years of experience working with startups and small businesses alike, we'll get your idea off the ground and build a fully-functional MVP.">
     <meta name="author" content="OverWine.io">
-    <meta name="keywords" content="OverWine, web, development, design, consulting, app, application, rails, ruby, mvp, minimum, viable, product, minimum viable product">
-		<meta property="og:title" content="OverWine.io | Let us build your next MVP." />
+    <meta name="keywords" content="OverWine, web, development, design, consulting, app, application, rails, ruby, mvp, minimum, viable, product, minimum viable product, dev, devops">
+		<meta property="og:title" content="OverWine.io | Relax. Let us build your next MVP." />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://overwine.io" />
 		<meta property="og:image" content="<%= image_url "social.jpg" %>" />
@@ -18,14 +18,23 @@
     <meta property="og:url" content="https://overwine.io/" />
     <meta property="og:site_name" content="OverWine.io" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="OverWine.io | Let us build your next MVP." />
+    <meta name="twitter:title" content="OverWine.io | Relax. Let us build your next MVP." />
     <meta name="twitter:description" content="Top-tier web application design & development from the heart of Silicon Valley." />
     <meta name="twitter:image" content="<%= image_url "social.jpg" %>" />
 		<link rel="canonical" href="https://overwine.io/" />
-
     <%= tag :link, rel: "icon", type: "image/png", href: image_path("favicon.png") %>
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113875556-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-113875556-1');
+      gtag('config', 'GA_TRACKING_ID', { 'link_attribution': true });  // Enable enhanced link attribution  
+    </script>
 
     <%= javascript_include_tag 'application' %>
   </head>
@@ -38,9 +47,9 @@
       <div class="flex-container">
         <h4>Everything is better OverWine.</h4>
         <ul>
-          <li><%= link_to icon('facebook'), 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Foverwine.io', target: :blank %></li>
-          <li><%= link_to icon('twitter'), 'https://twitter.com/intent/tweet?url=http://overwine.io', target: :blank %></li>
-          <li><%= link_to icon('google-plus-official'), 'https://plus.google.com/share?url=http://overwine.io', target: :blank %></li>
+          <li><%= link_to icon('facebook'), 'https://www.facebook.com/sharer/sharer.php?u=https://overwine.io', target: :blank %></li>
+          <li><%= link_to icon('twitter'), 'https://twitter.com/intent/tweet?url=https://overwine.io', target: :blank %></li>
+          <li><%= link_to icon('google-plus-official'), 'https://plus.google.com/share?url=https://overwine.io', target: :blank %></li>
         </ul>
         <small>copyright <%= Time.now.year %> OverWine.io</small>
       </div>
