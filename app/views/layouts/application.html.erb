@@ -54,6 +54,9 @@
           version    : 'v2.12'
         });
         FB.AppEvents.logPageView();
+        FB.Event.subscribe("xfbml.render", function(){
+          document.querySelector("#facebook-page-button").style.visibility = "visible";
+        });
       };
 
       (function(d, s, id){

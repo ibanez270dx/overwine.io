@@ -83,11 +83,12 @@ body#application.index {
       text-align: center;
 
       #facebook-page-button {
+        visibility: hidden;
         position: relative;
-        top: -5px; left: -3px;
+        top: -4px; left: -3px;
         display: inline-block;
         box-sizing: border-box;
-        padding: 5px 4px 0px 6px;
+        padding: 7px 4px 0px 6px;
         height: 28px;
         border: 1px solid #4267b2;
         border-radius: 4px;
@@ -98,14 +99,14 @@ body#application.index {
         color: $white;
         text-decoration: none;
         transition: all 0.05s;
-        
+
         &:hover {
           background: #365899;
           border: 1px solid #365899;
         }
-        i.fa {
+        i.fa-flag {
           margin-right: 3px;
-          font-size: 15px;
+          font-size: 12px;
         }
       }
     }
